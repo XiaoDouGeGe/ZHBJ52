@@ -8,6 +8,11 @@ import android.widget.RadioGroup;
 
 import com.itheima.zhbj52.R;
 import com.itheima.zhbj52.base.BasePager;
+import com.itheima.zhbj52.base.impl.GovAffairPager;
+import com.itheima.zhbj52.base.impl.HomePager;
+import com.itheima.zhbj52.base.impl.NewsCenterPager;
+import com.itheima.zhbj52.base.impl.SettingPager;
+import com.itheima.zhbj52.base.impl.SmartServicePager;
 import com.lidroid.xutils.ViewUtils;
 import com.lidroid.xutils.view.annotation.ViewInject;
 
@@ -42,12 +47,19 @@ public class ContentFragment extends BaseFragment {
 
         rgGroup.check(R.id.rb_home);//默认勾选首页
 
+
         //初始化5个子页面
-        for (int i=0; i<5; i++){
-            mPagerList = new ArrayList<BasePager>();
-            BasePager pager = new BasePager(mActivity);
-            mPagerList.add(pager);
-        }
+        mPagerList = new ArrayList<BasePager>();
+//        for (int i=0; i<5; i++){
+//            BasePager pager = new BasePager(mActivity);
+//            mPagerList.add(pager);
+//        }
+        mPagerList.add(new HomePager(mActivity));
+        mPagerList.add(new NewsCenterPager(mActivity));
+        mPagerList.add(new SmartServicePager(mActivity));
+        mPagerList.add(new GovAffairPager(mActivity));
+        mPagerList.add(new SettingPager(mActivity));
+
 
         mViewPager.setAdapter(new ContentAdapter());
 
@@ -67,8 +79,10 @@ public class ContentFragment extends BaseFragment {
 
         @Override
         public Object instantiateItem(ViewGroup container, int position) {
-            container.addView(mPagerList.get(position).mRootView);
-            return mPagerList.get(position).mRootView;
+            BasePager pager = mPagerList.get(position);
+            container.addView(pager.mRootView);
+            pager.initData();//初始化数据...
+            return pager.mRootView;
         }
 
         @Override

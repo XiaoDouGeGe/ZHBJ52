@@ -2,6 +2,8 @@ package com.itheima.zhbj52.base;
 
 import android.app.Activity;
 import android.view.View;
+import android.widget.FrameLayout;
+import android.widget.TextView;
 
 import com.itheima.zhbj52.R;
 
@@ -15,6 +17,9 @@ public class BasePager {
     public Activity mActivity;
     public View mRootView; //布局对象
 
+    public TextView tvTitle;//标题对象
+    public FrameLayout flContent;//内容对象
+
     public BasePager(Activity activity){
         mActivity = activity;
 
@@ -26,6 +31,10 @@ public class BasePager {
      */
     public void initViews(){
         mRootView = View.inflate(mActivity, R.layout.base_pager, null);
+
+        tvTitle = (TextView) mRootView.findViewById(R.id.tv_title);
+        flContent= (FrameLayout) mRootView.findViewById(R.id.fl_content);
+
     }
 
     /**
