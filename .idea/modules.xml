@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/SlidingMenuLibrary/SlidingMenuLibrary.iml" filepath="$PROJECT_DIR$/SlidingMenuLibrary/SlidingMenuLibrary.iml" />
+      <module fileurl="file://$PROJECT_DIR$/libraries/SlidingMenu/library/SlidingMenu_library.iml" filepath="$PROJECT_DIR$/libraries/SlidingMenu/library/SlidingMenu_library.iml" />
+      <module fileurl="file://$PROJECT_DIR$/XUtilsLibrary/XUtilsLibrary.iml" filepath="$PROJECT_DIR$/XUtilsLibrary/XUtilsLibrary.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SlidingMenuLibrary/library.iml" filepath="$PROJECT_DIR$/SlidingMenuLibrary/library.iml" />
+      <module fileurl="file://$PROJECT_DIR$/zhbj52.iml" filepath="$PROJECT_DIR$/zhbj52.iml" />
+    </modules>
+  </component>
+</project>
