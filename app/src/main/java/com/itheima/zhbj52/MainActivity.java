@@ -28,7 +28,9 @@ public class MainActivity extends SlidingFragmentActivity {
         initFragment();
     }
 
+
     /**
+     *
      * 初始化fragment，将fragment填充给布局文件
      */
     private void initFragment(){
