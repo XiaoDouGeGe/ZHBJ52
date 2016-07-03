@@ -28,6 +28,6 @@ public class GovAffairPager extends BasePager  {
         text.setTextSize(30);
         text.setGravity(Gravity.CENTER);
         //向FrameLayout中动态添加布局
-        flContent.addView(text);
+        fflContent.addView(text);
     }
 }

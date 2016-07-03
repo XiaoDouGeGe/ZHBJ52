@@ -18,7 +18,7 @@ public class BasePager {
     public View mRootView; //布局对象
 
     public TextView tvTitle;//标题对象
-    public FrameLayout flContent;//内容对象
+    public FrameLayout fflContent;//内容对象
 
     public BasePager(Activity activity){
         mActivity = activity;
@@ -33,7 +33,7 @@ public class BasePager {
         mRootView = View.inflate(mActivity, R.layout.base_pager, null);
 
         tvTitle = (TextView) mRootView.findViewById(R.id.tv_title);
-        flContent= (FrameLayout) mRootView.findViewById(R.id.fl_content);
+        fflContent= (FrameLayout) mRootView.findViewById(R.id.ffl_content);
 
     }
 
